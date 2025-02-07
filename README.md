@@ -1,2 +1,5 @@
-# intro-to-java
-Introductory courses on Java to compliment Uni module on OOP
+# Java Introduction
+Introductory course on Java to compliment uni module on OOP.
+
+## Course Name:
+MOOC Java Programming from the University of Helsinki.
