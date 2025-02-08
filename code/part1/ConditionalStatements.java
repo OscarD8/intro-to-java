@@ -56,7 +56,10 @@ public class ConditionalStatements
 
         // Tax calculator
         System.out.println("Enter the value: ");
-        int itemValue = scanner.nextInt();
+        int itemValue = Integer.valueOf(scanner.nextLine());
+        System.out.println("Now for the second string: ");
+        String secondValue = scanner.nextLine();
+        System.out.println(secondValue);
 
         if (itemValue < 5000) {
             System.out.println("No tax!");
