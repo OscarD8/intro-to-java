@@ -1,5 +1,6 @@
 package code.part4.FilesAndReadingData;
 
+import javax.xml.transform.Result;
 import java.io.File;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -120,7 +121,106 @@ public class Main
 //        }
 
 
-        //
+        // Reading file and storing objects
+//        Scanner userReader = new Scanner(System.in);
+//        System.out.println("Filename: ");
+//        String userInput = userReader.nextLine();
+//        ArrayList<Person> personList = readRecordsFromFile(userInput);
+//        for (Person person : personList) {
+//            System.out.println(person);
+//        }
+
+
+        // Sports Statistics
+
+        Scanner reader = new Scanner(System.in);
+        System.out.print("File: ");
+        String file = reader.nextLine();
+        ArrayList<Results> resultRecords = readResults(file);
+
+        if (resultRecords.size() > 1) {
+            System.out.print("Team: ");
+            String teamRequest = reader.nextLine();
+            getGamesPlayed(resultRecords, teamRequest);
+            getWinsAndLosses(resultRecords, teamRequest);
+        }
+    }
+
+
+
+    public static ArrayList<Person> readRecordsFromFile(String file) {
+        ArrayList<Person> personList = new ArrayList<>();
+
+        try (Scanner reader = new Scanner(Path.of(file))) {
+            while (reader.hasNextLine()) {
+                String line = reader.nextLine();
+                String[] parts = line.split(",");
+
+                String name = parts[0];
+                int age = Integer.parseInt(parts[1]);
+                personList.add(new Person(name, age));
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+
+        return personList;
+    }
+
+
+
+    public static ArrayList<Results> readResults(String file) {
+        ArrayList<Results> resultsList = new ArrayList<>();
+
+        try (Scanner fileReader = new Scanner(Path.of(file))) {
+            while (fileReader.hasNextLine()) {
+                String record = fileReader.nextLine();
+                String[] recordParts = record.split(",");
+
+                String homeTeam = recordParts[0];
+                String awayTeam = recordParts[1];
+                int homeScore = Integer.parseInt(recordParts[2]);
+                int awayScore = Integer.parseInt(recordParts[3]);
+
+                resultsList.add(new Results(homeTeam, awayTeam, homeScore, awayScore));
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+        return resultsList;
+    }
+
+
+    public static void getGamesPlayed(ArrayList<Results> results, String teamCheck) {
+        int count = 0;
+        for (Results record : results) {
+            if (record.checkNameBool(teamCheck)) {
+                count++;
+            }
+        }
+        System.out.println("Games: " + count);
+    }
+
+    public static void getWinsAndLosses(ArrayList<Results> results, String team) {
+        int wins = 0;
+        int losses = 0;
+
+        for (Results result : results) {
+            if (result.getAwayTeam().equals(team)) {
+                if (result.getAwayTeamPoints() > result.getHomeTeamPoints()) {
+                    wins++;
+                }
+                else losses++;
+            }
+            else if (result.getHomeTeam().equals(team)) {
+                if (result.getHomeTeamPoints() > result.getAwayTeamPoints()) {
+                    wins ++;
+                }
+                else losses ++;
+            }
+        }
+        System.out.println("Wins: " + wins + "\n" +
+                            "Losses: " + losses);
     }
 }
 
