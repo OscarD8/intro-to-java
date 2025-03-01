@@ -7,6 +7,7 @@ public class HealthStation
     public HealthStation() {
         this.weighingsCount = 0;
     }
+
     public int weigh(Person person) {
         this.weighingsCount += 1;
         return person.getWeight();
