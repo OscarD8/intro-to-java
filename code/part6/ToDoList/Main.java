@@ -1,4 +1,4 @@
-package code.part6.ToDoList;
+package part6.ToDoList;
 
 import java.util.Scanner;
 

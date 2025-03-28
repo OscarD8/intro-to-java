@@ -1,4 +1,4 @@
-package code.part6.ListsAndObjects;
+package part6.ListsAndObjects;
 
 public class Message
 {

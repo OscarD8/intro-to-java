@@ -1,4 +1,4 @@
-package code.part5.OverloadingMethodsAndConstructors;
+package part5.OverloadingMethodsAndConstructors;
 
 public class Product
 {

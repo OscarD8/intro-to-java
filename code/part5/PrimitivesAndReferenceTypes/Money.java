@@ -1,4 +1,4 @@
-package code.part5.PrimitivesAndReferenceTypes;
+package part5.PrimitivesAndReferenceTypes;
 
 public class Money
 {

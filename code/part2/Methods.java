@@ -1,4 +1,4 @@
-package code.part2;
+package part2;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package code.part4.FilesAndReadingData;
+package part4.FilesAndReadingData;
 
 import javax.xml.transform.Result;
 import java.io.File;
@@ -38,36 +38,36 @@ public class Main
 
 
         // checking a guest list
-//        ArrayList<String> fileArray = new ArrayList<>();
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Enter file to open <file.txt> : ");
-//        String userFile = scanner.nextLine();
-//
-//        try (Scanner filescan = new Scanner(Path.of(userFile))) {
-//            while (filescan.hasNextLine()) {
-//                String row = filescan.nextLine().trim();
-//                fileArray.add(row);
-//            }
-//        } catch (Exception e) {
-//            System.out.println("Error: " + e.getMessage());
-//        }
-//        System.out.println();
-//
-//        System.out.println("Enter names (empty quits): ");
-//        while (true) {
-//            System.out.print(">");
-//            String guestCheck = scanner.nextLine();
-//
-//            if (guestCheck.isEmpty()) {
-//                break;
-//            }
-//            else if (fileArray.contains(guestCheck)) {
-//                System.out.println("mucho gusto");
-//            }
-//            else {
-//                System.out.println("NOMBRE NO FOUND MI PERRO :(");
-//            }
-//        }
+        ArrayList<String> fileArray = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter file to open <file.txt> : ");
+        String userFile = scanner.nextLine();
+
+        try (Scanner filescan = new Scanner(Path.of(userFile))) {
+            while (filescan.hasNextLine()) {
+                String row = filescan.nextLine().trim();
+                fileArray.add(row);
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+        System.out.println();
+
+        System.out.println("Enter names (empty quits): ");
+        while (true) {
+            System.out.print(">");
+            String guestCheck = scanner.nextLine();
+
+            if (guestCheck.isEmpty()) {
+                break;
+            }
+            else if (fileArray.contains(guestCheck)) {
+                System.out.println("mucho gusto");
+            }
+            else {
+                System.out.println("NOMBRE NO FOUND MI PERRO :(");
+            }
+        }
 
 
         // checking ints within range

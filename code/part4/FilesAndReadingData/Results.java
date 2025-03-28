@@ -1,4 +1,4 @@
-package code.part4.FilesAndReadingData;
+package part4.FilesAndReadingData;
 
 import java.util.ArrayList;
 

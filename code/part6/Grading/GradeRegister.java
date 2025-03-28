@@ -1,4 +1,4 @@
-package code.part6.Grading;
+package part6.Grading;
 
 import java.util.ArrayList;
 

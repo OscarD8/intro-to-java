@@ -1,10 +1,7 @@
-package code.part5.EqualityWithLists;
+package part5.EqualityWithLists;
 
-import code.part5.OOPpart2.Book;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Scanner;
+
 
 public class Main
 {

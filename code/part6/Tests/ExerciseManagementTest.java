@@ -1,6 +1,6 @@
-package code.part6.Tests;
+package part6.Tests;
 
-import code.part6.ExamplesForTesting.ExerciseManagement;
+import part6.ExamplesForTesting.ExerciseManagement;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -27,15 +27,15 @@ class ExerciseManagementTest
 
     @Test
     public void addedExerciseIsInList() {
-        exerciseManagement.add("Write an exercise");
-        assertTrue(exerciseManagement.exerciseList().contains("Write an exercise"));
+        exerciseManagement.add("Yoga");
+        assertTrue(exerciseManagement.containExercise("Yoga"));
     }
 
     @Test
     public void markExerciseAsComplete() {
-        exerciseManagement.add("Write an exercise");
-        exerciseManagement.markAsCompleted("Write an exercise");
-        assertTrue(exerciseManagement.isCompleted("Write an exercise"));
+        exerciseManagement.add("Yoga");
+        exerciseManagement.markAsCompleted("Yoga");
+        assertTrue(exerciseManagement.isCompleted("Yoga"));
     }
 
     @Test

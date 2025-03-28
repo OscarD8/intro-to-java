@@ -1,4 +1,4 @@
-package code.part6.JokeManage;
+package part6.JokeManage;
 
 import java.util.ArrayList;
 import java.util.Random;

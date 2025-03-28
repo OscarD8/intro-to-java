@@ -1,6 +1,6 @@
-package code.part6.ToDoList;
+package part6.ToDoList;
 
-import code.part6.CleanCode.WordList;
+import part6.CleanCode.WordList;
 
 public class TodoList
 {

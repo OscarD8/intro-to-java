@@ -1,4 +1,4 @@
-package code.part6.ExamplesForTesting;
+package part6.ExamplesForTesting;
 
 import java.util.ArrayList;
 
@@ -29,6 +29,15 @@ public class ExerciseManagement
         for (Exercise entry : this.exerciseList) {
             if (exercise.equals(entry.getName())) {
                 return entry.isCompleted();
+            }
+        }
+        return false;
+    }
+
+    public boolean containExercise(String exercise) {
+        for (Exercise entry : this.exerciseList) {
+            if (entry.getName().equals(exercise)) {
+                return true;
             }
         }
         return false;

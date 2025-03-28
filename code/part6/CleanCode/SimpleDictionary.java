@@ -1,4 +1,4 @@
-package code.part6.CleanCode;
+package part6.CleanCode;
 
 
 public class SimpleDictionary

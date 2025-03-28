@@ -1,4 +1,4 @@
-package code.part4;
+package part4;
 
 class Account {
     private String name;

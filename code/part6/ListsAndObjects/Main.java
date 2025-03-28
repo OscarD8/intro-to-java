@@ -1,4 +1,4 @@
-package code.part6.ListsAndObjects;
+package part6.ListsAndObjects;
 
 import java.util.ArrayList;
 import java.util.Collection;

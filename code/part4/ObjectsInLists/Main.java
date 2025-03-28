@@ -1,4 +1,4 @@
-package code.part4.ObjectsInLists;
+package part4.ObjectsInLists;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

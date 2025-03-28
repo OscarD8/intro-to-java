@@ -1,4 +1,4 @@
-package code.part5.EqualityWithLists;
+package part5.EqualityWithLists;
 
 import java.util.ArrayList;
 

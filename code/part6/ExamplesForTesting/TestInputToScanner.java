@@ -1,4 +1,4 @@
-package code.part6.ExamplesForTesting;
+package part6.ExamplesForTesting;
 
 import java.util.Scanner;
 import java.util.ArrayList;

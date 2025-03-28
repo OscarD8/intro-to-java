@@ -1,4 +1,4 @@
-package code.part6.ListsAndObjects.CargoHold;
+package part6.ListsAndObjects.CargoHold;
 
 import java.util.ArrayList;
 

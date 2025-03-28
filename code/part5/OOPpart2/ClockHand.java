@@ -1,4 +1,4 @@
-package code.part5.OOPpart2;
+package part5.OOPpart2;
 
 public class ClockHand
 {
